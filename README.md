@@ -1,51 +1,44 @@
 Design Patterns Course — Homework #1
-Features & Logic
-The system handles interactions between authors, readers, and different book formats.
+This project is a TypeScript-based library management system built to demonstrate core Object-Oriented Programming (OOP) principles. The architecture focuses on creating a flexible, scalable environment for managing authors, readers, and various book formats.
 
-Applied Principles:
-1. Encapsulation: Class fields are kept private or protected. Interaction happens through getters, setters, and dedicated methods to keep the data safe.
-2. Abstraction: Used AbstractBook to ensure we never create a "generic" book—it must be either a physical Book or an EBook.
-3. Inheritance: EBook and Book inherit shared logic from the abstract base class.
-4. Polymorphism: The getDescription() method behaves differently depending on whether it’s a digital or physical copy.
-5. Aggregation: The Library class acts as the central hub, managing collections of books, authors, and readers.
+🛠 OOP Principles Applied
+To meet the architectural requirements, the following concepts were implemented:
 
-Tech Stack
-1. Language: TypeScript (Strict)
-2. Runtime: Node.js
-3. Tools: ts-node for development, tsc for builds.
+Encapsulation: Internal data (such as book availability and reader lists) is protected using private or protected modifiers. Access is managed strictly through public methods (getters/setters), ensuring data integrity.
 
-How to Run
-First, install the necessary dependencies:
-npm install
+Abstraction: The AbstractBook class serves as a blueprint. It prevents the instantiation of a "generic" book, forcing the system to specify whether a book is a physical Book or an EBook.
 
-To run the demo script directly:
-npx ts-node src/main.ts
+Inheritance: Book and EBook extend the base AbstractBook class, inheriting shared properties while allowing for specialized behavior.
 
-To make this look like it was written by a real developer (rather than a copy-pasted AI response), we should make it a bit more personal, concise, and structured. A "human" README usually focuses on why the project exists and includes a personal touch or a more casual (yet professional) tone.
+Polymorphism: The getDescription() method is overridden in subclasses. This allows the system to handle different book types through a single interface while providing format-specific details.
 
-Here’s a "human-written" version of your README:
+Aggregation: The Library class acts as a central hub. It aggregates collections of authors, books, and readers without tightly coupling their lifecycles.
 
-Library Management System
+Service Layer: Business logic for borrowing and returning books is decoupled into a dedicated BorrowService, following the Separation of Concerns principle.
+
+Getting Started
+Here is a professional, human-written version of the README in English. It’s structured to highlight your architectural decisions and technical proficiency.
+
+📚 Library Management System
 Design Patterns Course — Homework #1
-This is a TypeScript-based project designed to model a real-world library environment. The main goal was to practice core OOP principles like encapsulation, inheritance, and polymorphism within a cohesive system.
+This project is a TypeScript-based library management system built to demonstrate core Object-Oriented Programming (OOP) principles. The architecture focuses on creating a flexible, scalable environment for managing authors, readers, and various book formats.
 
-🛠 Features & Logic
-The system handles interactions between authors, readers, and different book formats.
+🛠 OOP Principles Applied
+To meet the architectural requirements, the following concepts were implemented:
 
-Applied Principles:
-Encapsulation: Class fields are kept private or protected. Interaction happens through getters, setters, and dedicated methods to keep the data safe.
+Encapsulation: Internal data (such as book availability and reader lists) is protected using private or protected modifiers. Access is managed strictly through public methods (getters/setters), ensuring data integrity.
 
-Abstraction: Used AbstractBook to ensure we never create a "generic" book—it must be either a physical Book or an EBook.
+Abstraction: The AbstractBook class serves as a blueprint. It prevents the instantiation of a "generic" book, forcing the system to specify whether a book is a physical Book or an EBook.
 
-Inheritance: EBook and Book inherit shared logic from the abstract base class.
+Inheritance: Book and EBook extend the base AbstractBook class, inheriting shared properties while allowing for specialized behavior.
 
-Polymorphism: The getDescription() method behaves differently depending on whether it’s a digital or physical copy.
+Polymorphism: The getDescription() method is overridden in subclasses. This allows the system to handle different book types through a single interface while providing format-specific details.
 
-Aggregation: The Library class acts as the central hub, managing collections of books, authors, and readers.
+Aggregation: The Library class acts as a central hub. It aggregates collections of authors, books, and readers without tightly coupling their lifecycles.
 
-💻 Tech Stack
-Language: TypeScript (Strict)
+Service Layer: Business logic for borrowing and returning books is decoupled into a dedicated BorrowService, following the Separation of Concerns principle.
 
-Runtime: Node.js
-
-Tools: ts-node for development, tsc for builds.
+🚀 Getting Started
+1. Install Dependencies: npm install
+2. Run the Demo npx ts-node src/main.ts
+3. Build the Project:npx tsc
