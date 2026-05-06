@@ -49,22 +49,3 @@ Language: TypeScript (Strict)
 Runtime: Node.js
 
 Tools: ts-node for development, tsc for builds.
-
-🚀 How to Run
-First, install the necessary dependencies:
-
-Bash
-npm install
-To run the demo script directly:
-
-Bash
-npx ts-node src/main.ts
-
-If you prefer to compile to JavaScript first:
-npx tsc
-node dist/main.js
-
-Structure:
-1. src/models/ — Core entities (Author, Book, Reader, etc.)
-2. src/services/ — Logic for borrowing and returning books.
-3. src/main.ts — Demo scenario to test the system logic.
